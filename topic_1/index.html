@@ -132,12 +132,28 @@
         
         <section class="section content has-text-justified">
           <p>Welcome to my first blog.</p>
-<p>I used to think creating a website is a tedious process that can only be executed by experienced professionals. Now, that remains true, but not totally true. I&rsquo;m definitely not an experienced web developer, however, I&rsquo;ve manged to create a blogsite (for free), using Hugo, GitHub and Netlify. If you&rsquo;re also interested on this easy and affordable way to start your own site, then keep reading below.</p>
+<p>I used to think creating a website would be a tedious and complicated process that can only be executed by experienced professionals. Now, that remains true, but not totally true. I&rsquo;m definitely not an experienced web developer, however, I&rsquo;ve manged to create a blogsite (for free), using Hugo, GitHub and Netlify. If you&rsquo;re also interested on this easy and affordable way to start your own site, then keep reading below.</p>
 <p>Firstly, you will need to set up a GitHub account, if you don&rsquo;t already have one, and then create a new repository. Name the repository and add the option for a README file.</p>
 <p>To start you will need to install Hugo. I&rsquo;m using a mac and already have brew installed. So, in the terminal, i will execute the command:</p>
 <p>brew install hugo</p>
 <p>Then you can confirm the version by typing the command hugo &ndash;version.</p>
-<p>Adding text..!!</p>
+<p>After Hugo is installed you can now go ahead and create your website. However, you will need to choose a theme first. Hugo has a lot of themes that you can choose from their website.</p>
+<p>To create your new website, type the following command into your terminal</p>
+<p>hugo new site (name for your site)</p>
+<p>Then open this folder with the command</p>
+<p>cd (name for your website)</p>
+<p>This will create blank pages for your website. The next thing you want to do is to clone the theme you chose into a themes folder. You can do this by first initializing Git</p>
+<p>git init</p>
+<p>And then copying and pasting the submodule of the theme of your choice. You can find this informtaion on the Hugo themes page of the theme of your choice. An example of mine would be</p>
+<p>git submodule add <a href="https://github.com/PippoRJ/hugo-refresh.git">https://github.com/PippoRJ/hugo-refresh.git</a> themes/hugo-refresh</p>
+<p>After adding your theme of choice to a themes folder, you might want to start with the example version of your website. You can do this by first deleting the config.toml file that your default website folder comes with and replace it with a configuration of the example site.</p>
+<p>First use the command below to delete the default config file</p>
+<p>rm config.toml</p>
+<p>Then you want to fetch the config file of the example site of your theme of choice. Again the command below is an example with the theme i used. You can find this information on the webpage of your Hugo theme of choice.</p>
+<p>curl -O <a href="https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml">https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml</a></p>
+<p>After all this is done, you can now run the site locally on your machine by typing the code below</p>
+<p>hugo server -D</p>
+<p>You can now open this site in your browser with the following link http://localhost:1313</p>
 
         </section>
       </div>
